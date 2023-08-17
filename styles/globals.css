@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mainColor: #31333b;
+  --color1: #271762;
+  --color1: #613dc1;
+  --color1: #6411ad;
+  --color1: #540c97;
+  --color1: #8c07dd;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
