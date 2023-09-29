@@ -7,27 +7,27 @@ import Link from 'next/link';
 const SocialLinks = () => {
   return (
     <div
-      className={`absolute bottm-1 right-0 lg:flex flex flex-col justify-between ${styles.mobile}`}
+      className={`absolute bottm-1 right-0 lg:flex flex flex-col justify-between  ${styles.mobile}`}
     >
       <div className={` ${styles.wrapper}`}>
         <div>
-          <Link href={'/'}>
-            <AiFillLinkedin size={45} />
+          <Link href="https://www.linkedin.com/in/taha-al-mulla-17a76923a/">
+            <AiFillLinkedin  size={40} />
           </Link>
         </div>
         <div>
-          <Link href={'/'}>
-            <AiFillGithub size={45} />
+          <Link href="https://github.com/Taha1dev">
+            <AiFillGithub size={40} />
           </Link>
         </div>
         <div>
-          <Link href={'/'}>
-            <AiOutlineWhatsApp size={45} />
+          <Link href="https://wa.link/yns3z1">
+            <AiOutlineWhatsApp  size={40} />
           </Link>
         </div>
         <div>
-          <Link href={'/'}>
-            <AiFillFacebook size={45} />
+          <Link href="https://www.facebook.com/profile.php?id=100010269363969&mibextid=ZbWKwL">
+            <AiFillFacebook  size={40} />
           </Link>
         </div>
       </div>

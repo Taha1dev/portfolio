@@ -30,8 +30,8 @@
   position: absolute;
   height: 113px;
   left: 28%;
-  top: -46.5%;
+  top: -48.5%;
   width: 5px;
   border-radius: 10px;
-  background-color: var(--mainColor);
+  background-color: #f9f9f9;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.css';
 const HyperOne = ({ value }) => {
-  return <h1 className={`${styles.h1}`}>{value}</h1>;
+  return <p className={`${styles.h1}`}>{value}</p>;
 };
 
 export default HyperOne;

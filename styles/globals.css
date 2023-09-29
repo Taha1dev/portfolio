@@ -2,18 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --mainColor: #31333b;
-  --color1: #271762;
-  --color1: #613dc1;
-  --color1: #6411ad;
-  --color1: #540c97;
-  --color1: #8c07dd;
+  --mainColor: #051823;
+  --secondColor: #0a1f2e;
+  --textColor: #009688;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-color: var(--mainColor);
+  color: white
+}
+
+
+
+@keyframes dropShadowEffect {
+  0% {
+    filter: drop-shadow(0 0 2em #00bcf2);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 4em #00bcf2);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 2em #00bcf2);
+  }
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--textColor);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mainColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--textColor);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
