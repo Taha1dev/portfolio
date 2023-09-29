@@ -11,22 +11,22 @@ const SocialLinks = () => {
     >
       <div className={` ${styles.wrapper}`}>
         <div>
-          <Link href="https://www.linkedin.com/in/taha-al-mulla-17a76923a/">
+          <Link target='_blank' href="https://www.linkedin.com/in/taha-al-mulla-17a76923a/">
             <AiFillLinkedin  size={40} />
           </Link>
         </div>
         <div>
-          <Link href="https://github.com/Taha1dev">
+          <Link target='_blank' href="https://github.com/Taha1dev">
             <AiFillGithub size={40} />
           </Link>
         </div>
         <div>
-          <Link href="https://wa.link/yns3z1">
+          <Link target='_blank' href="https://wa.link/yns3z1">
             <AiOutlineWhatsApp  size={40} />
           </Link>
         </div>
         <div>
-          <Link href="https://www.facebook.com/profile.php?id=100010269363969&mibextid=ZbWKwL">
+          <Link target='_blank' href="https://www.facebook.com/profile.php?id=100010269363969&mibextid=ZbWKwL">
             <AiFillFacebook  size={40} />
           </Link>
         </div>

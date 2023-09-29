@@ -10,6 +10,7 @@
   justify-content: center;
   padding: var(--p-5);
   position: relative;
+  cursor: var(--pointer-cursor);
 }
 
 .card:hover {

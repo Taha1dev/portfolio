@@ -16,11 +16,11 @@ const TestimonialCard = ({ imageSrc, name, title, url, testimonial }) => {
         alt={name}
         className="absolute -right-6 -top-12 w-24 h-24 rounded-full border-4 border-gray-100 hidden sm:block"
       />
-      <Link href={url} className="text-primary text-xl font-bold my-2">
+      <Link href={url} className="text-primary text-xl font-bold mt-2">
         {name}
       </Link>
-      <span className="title text-gray-900 block mb-4">{title}</span>
-      <div className="rate flex text-yellow-400 mb-4">
+      <span className="title text-gray-900 block mt-4">{title}</span>
+      <div className="rate flex text-yellow-400 mt-2">
         <FontAwesomeIcon
           width={30}
           height={30}
@@ -57,7 +57,7 @@ const TestimonialCard = ({ imageSrc, name, title, url, testimonial }) => {
           className="mr-1"
         />
       </div>
-      <p className="text-gray-700 text-lg leading-relaxed text-justify">
+      <p className="text-gray-700 text-lg leading-relaxed text-justify mt-2">
         {testimonial}
       </p>
     </div>

@@ -12,7 +12,10 @@ const Testimonials = () => {
       rating: 4,
 
       testimonial:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus quaerat ducimus.',
+      `
+      I would highly recommend Taha as a Junior Front End Developer  for his exceptional work ethic, dedication, and continuous efforts to improve. His commitment to learning and growing as a front-end developer is truly inspiring.
+      keep the great work Taha.
+      `
     },
     {
       id: 2,
@@ -32,7 +35,7 @@ const Testimonials = () => {
       url: '',
       rating: 4,
       testimonial:
-        'I believe that the skills and qualities you have demonstrated during your time with us will undoubtedly pave the way for a successful career in frontend development. Your dedication, adaptability, and eagerness to learn make you an asset to any team. I sincerely hope that our paths cross again in the future, as it would be a pleasure to work alongside you once more.',
+        'I believe that the skills and qualities you have demonstrated during your time with us will undoubtedly pave the way for a successful career in frontend development. Your dedication, adaptability, and eagerness to learn make you an asset to any team. ',
     },
   ];
   return (
