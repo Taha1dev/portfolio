@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode:'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -14,7 +15,8 @@ module.exports = {
       },
       colors: {
         primary: 'var(--textColor)',
-        mainBg: '#31333b',
+        mainBg: 'var(--mainColor)',
+        secondary: 'var(--secondColor)'
       },
     },
   },
