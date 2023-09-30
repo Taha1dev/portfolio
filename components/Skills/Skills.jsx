@@ -31,7 +31,7 @@ const Skills = () => {
           innovative applications{' '}
         </p>
       </div>
-      <div className="mt-12 flex justify-center flex-wrap lg:mx-32 z-1 gap-8 ">
+      <div className="skillCard mt-12 flex justify-center flex-wrap lg:mx-32 z-1 gap-8 ">
         {skillsData.map((skill, index) => (
           <SkillCard
             key={skill.name}

@@ -12,7 +12,6 @@
   position: relative;
   cursor: var(--pointer-cursor);
 }
-
 .card:hover {
   padding: 10px;
   border-radius: 50%;

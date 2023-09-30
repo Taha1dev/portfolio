@@ -4,7 +4,7 @@ import HyperOne from '../customH1/HyperOne';
 
 const cards = [
   {
-    src: '/svg/react.svg',
+    src: '/svg/skills/react.svg',
     alt: 'Web Development',
     title: 'Web Development',
     description: 'Building High-Quality Web application using modern Solutions',

@@ -74,3 +74,48 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.light {
+  background-color: #f9f9f9;
+  color: var(--mainColor);
+}
+
+.light h1,
+.light p {
+  color: var(--mainColor) !important;
+}
+
+.light .maingeader {
+  border-color: var(--mainColor);
+}
+
+.light input,
+.light textarea {
+  background-color: #ddd;
+}
+
+.light .skillCard>* {
+  background-color: #dcdcdc;
+}
+
+.light .navbar {
+  opacity: .8;
+}
+.light .popup{
+  background-color: var(--mainColor) !important;
+  opacity: .8;
+}
+.light .popup p{
+  color: #fff !important;
+}
+.light .social {
+  color: var(--mainColor);
+}
+
+.light .social::after {
+  background-color: var(--mainColor);
+}
+
+.light .card {
+  background-color: #ddd
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import CustomButton from '../button/CustomButton';
 import WhiteButton from '../button/WhiteButton';
 
 const Offer = () => {
