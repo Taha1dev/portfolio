@@ -1,0 +1,127 @@
+{
+  "name": "Taha al-Mulla Website",
+  "short_name": "Dr.Web",
+  "description": "A Progressive Web App built by Taha",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#051823",
+  "theme_color": "#051823",
+  "icons": [
+    {
+      "src": "./imgs/avatar-1.jpg",
+      "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/avatar-2.jpeg",
+      "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/avatar.jpeg",
+      "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/api.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/bootstrap.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/react.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/js.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/ts.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/html.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/css.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/scss.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/nextjs.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/git.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/figma_.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/redux.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/rq.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/tailwindcss.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/pug.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/skills/npm.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+
+    {
+      "src": "./svg/skills/vite.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/newseo.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/ui_ux.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./svg/webpack.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
