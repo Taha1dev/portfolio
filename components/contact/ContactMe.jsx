@@ -48,7 +48,7 @@ export default function ContactMe() {
         setIsNotEmpty(false);
       }, 3000);
     }
-  }, [isMessageSent,isNotEmpty]);
+  }, [isMessageSent, isNotEmpty]);
   return (
     <>
       <style jsx>{`
@@ -116,7 +116,7 @@ export default function ContactMe() {
               ></textarea>
             </div>
             <input
-              className="bg-primary cursor-pointer font-semibold py-2 px-4 "
+              className="bg-primary text-white cursor-pointer font-bold py-2 px-4 "
               type="submit"
               value="Send Message"
             />

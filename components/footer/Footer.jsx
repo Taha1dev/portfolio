@@ -14,26 +14,34 @@ export default function Footer() {
         <Link
           target="_blank"
           className="mx-4 "
+          aria-label="linkedin"
           href="https://www.linkedin.com/in/taha-al-mulla-17a76923a/"
         >
-          <AiFillLinkedin aria-label="linkedin" size={40} />
+          <AiFillLinkedin size={40} />
         </Link>
         <Link
           target="_blank"
           className="mx-4 "
+          aria-label="github"
           href="https://github.com/Taha1dev"
         >
-          <AiFillGithub aria-label="github" size={40} />
-        </Link>
-        <Link target="_blank" className="mx-4 " href="https://wa.link/yns3z1">
-          <AiOutlineWhatsApp aria-label="whatsapp" size={40} />
+          <AiFillGithub size={40} />
         </Link>
         <Link
           target="_blank"
           className="mx-4 "
+          aria-label="whatsapp"
+          href="https://wa.link/yns3z1"
+        >
+          <AiOutlineWhatsApp size={40} />
+        </Link>
+        <Link
+          target="_blank"
+          className="mx-4 "
+          aria-label="facebook"
           href="https://www.facebook.com/profile.php?id=100010269363969&mibextid=ZbWKwL"
         >
-          <AiFillFacebook aria-label="facebook" size={40} />
+          <AiFillFacebook size={40} />
         </Link>
       </div>
       <p className="text-center mt-4 text-lg font-bold">

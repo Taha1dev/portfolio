@@ -21,11 +21,13 @@ const About = () => {
   const memoizedImage = useMemo(
     () => (
       <Image
+        placeholder="blur"
         height={960}
         width={1080}
         alt="Taha Al-Mulla Image"
         src={'/imgs/Taha.jpg'}
         priority
+        fill
       />
     ),
     []

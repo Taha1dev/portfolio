@@ -5,13 +5,13 @@ import { ThemeToggler } from '@/theme/Themetoggler';
 
 export default function NavBar() {
   const navigation = [
-    { id: 1, rel:'preload', name: 'Home', href: '#home' },
-    { id: 2, rel:'preload', name: 'About', href: '#about' },
-    { id: 3, rel:'preload', name: 'Services', href: '#services' },
-    { id: 4, rel:'preload', name: 'Skills', href: '#skills' },
-    { id: 5, rel:'preload', name: 'Testimonial', href: '#testimonial' },
-    { id: 6, rel:'preload', name: 'Contact', href: '#contact' },
-    { id: 7, rel:'preload', name: <ThemeToggler />, href: '#' },
+    { id: 1, name: 'Home', href: '/home' },
+    { id: 2, name: 'About', href: '/about' },
+    { id: 3, name: 'Services', href: '/services' },
+    { id: 4, name: 'Skills', href: '/skills' },
+    { id: 5, name: 'Testimonial', href: '/testimonial' },
+    { id: 6, name: 'Contact', href: '/contact' },
+    { id: 7, name: <ThemeToggler />, href: '/' },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +37,9 @@ export default function NavBar() {
                 key={item.id}
                 to={item.href.substring(1)}
                 spy={true}
+                href={item.href}
                 smooth={true}
+                prefetch={item.prefetch}
                 duration={200}
                 className="text-lg leading-6 cursor-pointer"
               >

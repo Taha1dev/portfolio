@@ -4,17 +4,28 @@ import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const TestimonialCard = ({ imageSrc, name, title, url, testimonial }) => {
+const TestimonialCard = ({
+  id,
+  imageSrc,
+  name,
+  title,
+  url,
+  width,
+  heigh,
+  testimonial,
+}) => {
   return (
     <div className="box bg-white shadow-md rounded-lg p-8 relative ">
       <Image
-        width={70}
-        height={70}
+        placeholder="blur"
+        key={id}
+        width={width}
+        height={heigh}
         loading="lazy"
         decoding="async"
         src={imageSrc}
         alt={name}
-        className="absolute -right-6 -top-12 w-24 h-24 rounded-full border-4 border-gray-100 hidden sm:block"
+        className="absolute -right-6 -top-12 w-24 h-24 rounded-full border-4 border-primary hidden sm:block"
       />
       <Link href={url} className="text-primary text-xl font-bold mt-2">
         {name}

@@ -30,6 +30,7 @@ export function ThemeToggler() {
 
   return (
     <button
+      aria-label="toggle icon"
       onClick={toggleThemeHandler}
       className="inline-flex items-center justify-center rounded-md text-lg"
       style={{
@@ -37,12 +38,12 @@ export function ThemeToggler() {
       }}
     >
       {icon === 'moon' ? (
-        <div>
-          <FaMoon color="grey" className="h-6 w-6" />
+        <div aria-label="moon">
+          <FaMoon aria-label="moon" color="grey" className="h-6 w-6" />
         </div>
       ) : (
-        <div>
-          <FaSun color="yellow" className="h-6 w-6" />
+        <div aria-label="sun">
+          <FaSun aria-label="sun" color="yellow" className="h-6 w-6" />
         </div>
       )}
     </button>

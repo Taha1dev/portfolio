@@ -24,12 +24,20 @@ const HeroSection = () => {
                 <div className="relative w-72 h-72">
                   <div className="absolute inset-0">
                     <Image
-                      className="object-cover w-full h-full rounded-full ring-gray-300 dark:ring-gray-500"
-                      src="/imgs/me.jpg"
+                      placeholder="blur"
+                      alt="Taha Al-Mulla Avatar"
+                      src="/_next/image?url=%2Fimgs%2Fme.jpg&w=3840&q=75"
                       width={1080}
                       height={1080}
-                      alt="Taha Al-Mulla Avatar"
+                      decoding="async"
                       priority
+                      fill
+                      className="object-cover w-full h-full rounded-full ring-gray-300 dark:ring-gray-500"
+                      style={{ color: 'transparent' }}
+                      srcSet={[
+                        '/_next/image?url=%2Fimgs%2Fme.jpg&w=1080&q=75 1x',
+                        '/_next/image?url=%2Fimgs%2Fme.jpg&w=3840&q=75 2x',
+                      ]}
                     />
                   </div>
                 </div>
