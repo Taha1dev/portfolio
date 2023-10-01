@@ -16,18 +16,13 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.17",
-    "@heroicons/react": "^2.0.18",
-    "@iconify/iconify": "^3.1.1",
-    "@next/bundle-analyzer": "^13.5.3",
-    "@zeit/next-css": "^1.0.1",
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.17",
     "font-awesome": "^4.7.0",
-    "fs": "^0.0.1-security",
     "next": "13.4.17",
     "next-pwa": "^5.6.0",
-    "next-themes": "^0.2.1",
+    "next-sitemap": "^4.2.3",
     "postcss": "8.4.28",
     "prettier": "^3.0.2",
     "react": "18.2.0",
@@ -36,12 +31,9 @@
     "react-intersection-observer": "^9.5.2",
     "react-scroll": "^1.8.9",
     "react-tsparticles": "^2.12.2",
-    "sitemap": "^7.1.1",
     "tailwindcss": "3.3.3",
     "tsparticles": "^2.12.0",
     "vanilla-tilt": "^1.8.1"
   },
-  "devDependencies": {
-    "@iconify-icon/react": "^1.0.8"
-  }
+  "devDependencies": {}
 }
