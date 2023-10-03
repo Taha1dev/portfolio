@@ -23,8 +23,8 @@ const About = () => {
     () => (
       <Suspense fallback={<Fallback />}>
         <Image
-          height={1080}
-          width={1440}
+          height={721}
+          width={798}
           alt="Taha Al-Mulla Image"
           src={'/imgs/Taha.jpg'}
           loading="lazy"
@@ -77,9 +77,7 @@ const About = () => {
             <Link
               aria-label="download cv"
               download
-              href={
-                'https://rxresu.me/taha.bus11/taha-almulla'
-              }
+              href={'https://rxresu.me/taha.bus11/taha-almulla'}
             >
               <CustomButton text={'Download CV'} />
             </Link>
