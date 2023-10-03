@@ -2,7 +2,7 @@
   "name": "Taha al-Mulla Website",
   "short_name": "Dr.Web",
   "description": "A Progressive Web App built by Taha",
-  "start_url": "http://localhost:3000",
+  "start_url": "https://tahamulla.vercel.app",
   "display": "standalone",
   "background_color": "#051823",
   "theme_color": "#051823",
