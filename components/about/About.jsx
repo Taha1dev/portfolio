@@ -78,7 +78,7 @@ const About = () => {
               aria-label="download cv"
               download
               href={
-                'https://drive.google.com/file/d/12r6-0fo4CjA7IREC8HkrIREwFlQoxLH1/view?usp=drive_link'
+                'https://rxresu.me/taha.bus11/taha-almulla'
               }
             >
               <CustomButton text={'Download CV'} />
