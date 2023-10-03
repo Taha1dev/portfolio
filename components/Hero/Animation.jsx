@@ -1,11 +1,32 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
+
 export const Animation = () => {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  const checkScreenSize = useCallback(() => {
+    setIsLargeScreen(window.innerWidth >= 1500);
+  }, []);
+
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, [checkScreenSize]);
+
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
+
   const particlesLoaded = useCallback(async () => {}, []);
+
+  if (!isLargeScreen) {
+    return null; 
+  }
+
   return (
     <Particles
       id="tsparticles"
