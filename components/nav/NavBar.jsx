@@ -27,7 +27,9 @@ export default function NavBar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-primary font-bold text-3xl">Dr.Web</span>
+              <span className="text-primary font-bold text-3xl">
+                Dr. Nextage
+              </span>
             </div>
           </div>
           <div className="hidden md:hidden lg:flex lg:gap-x-12">

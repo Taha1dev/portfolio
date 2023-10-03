@@ -51,7 +51,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="Taha Mulla Frontend Developer" />
         <meta
           property="og:description"
-          content="Hello My Name is Taha aka Dr.Web i'm a Software Engineer specalize in Building web applicatoins"
+          content="Hello My Name is Taha aka Dr. Nextage i'm a Software Engineer specalize in Building web applicatoins"
         />
         <meta property="og:url" content="https://tahamulla.vercel.app/" />
       </Head>
