@@ -23,8 +23,8 @@ const About = () => {
     () => (
       <Suspense fallback={<Fallback />}>
         <Image
-          height={300}
-          width={300}
+          height={1080}
+          width={1440}
           alt="Taha Al-Mulla Image"
           src={'/imgs/Taha.jpg'}
           loading="lazy"
