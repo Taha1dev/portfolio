@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import { Montserrat } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -62,6 +63,7 @@ export default function MyApp({ Component, pageProps }) {
       `}</style>
       <ThemeProvider>
         <Component {...pageProps} />
+        <Analytics />
       </ThemeProvider>
     </>
   );
