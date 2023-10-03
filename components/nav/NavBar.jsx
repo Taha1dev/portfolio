@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Link as ScrollLink } from 'react-scroll';
 import { ThemeToggler } from '@/theme/Themetoggler';
@@ -9,9 +9,10 @@ export default function NavBar() {
     { id: 2, name: 'About', href: '/about' },
     { id: 3, name: 'Services', href: '/services' },
     { id: 4, name: 'Skills', href: '/skills' },
-    { id: 5, name: 'Testimonial', href: '/testimonial' },
-    { id: 6, name: 'Contact', href: '/contact' },
-    { id: 7, name: <ThemeToggler />, href: '/' },
+    { id: 5, name: 'Portfolio', href: '/portfolio' },
+    { id: 6, name: 'Testimonial', href: '/testimonial' },
+    { id: 7, name: 'Contact', href: '/contact' },
+    { id: 8, name: <ThemeToggler />, href: '/' },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +27,7 @@ export default function NavBar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-white font-bold text-3xl">
-                Taha Al-Mulla
-              </span>
+              <span className="text-primary font-bold text-3xl">Dr.Web</span>
             </div>
           </div>
           <div className="hidden md:hidden lg:flex lg:gap-x-12">

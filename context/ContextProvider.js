@@ -5,17 +5,17 @@ export const DarkModeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   // Initialize the theme state from local storage or default to 'dark'
   const [theme, setTheme] = useState(() => {
-    if (typeof localStorage !== 'undefined') {
-      return localStorage.getItem('theme') || 'dark';
+    if (typeof sessionStorage !== 'undefined') {
+      return sessionStorage.getItem('theme') || 'dark';
     } else {
-      return 'dark'; // Fallback in case localStorage is not available
+      return 'dark'; // Fallback in case sessionStorage is not available
     }
   });
 
   useEffect(() => {
     // Check local storage for theme preference
-    if (typeof localStorage !== 'undefined') {
-      const storedTheme = localStorage.getItem('theme');
+    if (typeof sessionStorage !== 'undefined') {
+      const storedTheme = sessionStorage.getItem('theme');
       if (storedTheme) {
         setTheme(storedTheme);
       }
@@ -25,8 +25,8 @@ export const ThemeProvider = ({ children }) => {
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    if (typeof localStorage !== 'undefined') {
-      localStorage.setItem('theme', newTheme); // Save theme preference to local storage
+    if (typeof sessionStorage !== 'undefined') {
+      sessionStorage.setItem('theme', newTheme); // Save theme preference to local storage
     }
 
     // Update the body class based on the new theme

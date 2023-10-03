@@ -7,9 +7,9 @@ export function ThemeToggler() {
   const [icon, setIcon] = useState('moon'); // Default to 'moon' icon
 
   useEffect(() => {
-    // Check if localStorage is available before using it
+    // Check if sessionStorage is available before using it
     if (typeof window !== 'undefined') {
-      const savedIcon = localStorage.getItem('icon');
+      const savedIcon = sessionStorage.getItem('icon');
       if (savedIcon) {
         setIcon(savedIcon);
       }
@@ -24,7 +24,7 @@ export function ThemeToggler() {
     // Save the icon choice in local storage (if available)
     if (typeof window !== 'undefined') {
       const newIcon = icon === 'moon' ? 'sun' : 'moon';
-      localStorage.setItem('icon', newIcon);
+      sessionStorage.setItem('icon', newIcon);
     }
   };
 

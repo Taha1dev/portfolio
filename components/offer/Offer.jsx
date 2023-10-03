@@ -2,7 +2,7 @@ import React from 'react';
 import WhiteButton from '../button/WhiteButton';
 
 const Offer = () => {
-  const handleClick = () => {
+  const handleClick = async () => {
     window.scrollTo({
       top: window.pageYOffset + 800,
       behavior: 'smooth',

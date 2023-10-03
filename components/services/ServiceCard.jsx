@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import styles from './service.module.css';
 import VanillaTilt from 'vanilla-tilt';
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
+import Fallback from '../image/Fallback';
 const ServicesCard = ({ src, alt, title, description, className }) => {
   useEffect(() => {
     const element = document.querySelectorAll('.card');
@@ -16,14 +17,9 @@ const ServicesCard = ({ src, alt, title, description, className }) => {
       className={`${styles.parent} card flex justify-center items-center flex-col p-4 `}
     >
       <div className={`${styles.logo} ${styles[className]}`}>
-        <Image
-          placeholder="blur"
-          width={70}
-          height={70}
-          alt={alt}
-          src={src}
-          loading="lazy"
-        />
+        <Suspense fallback={<Fallback />}>
+          <Image width={70} height={70} alt={alt} src={src} loading="lazy" />
+        </Suspense>
       </div>
       <h1 className="text-2xl font-bold p-2">{title}</h1>
       <p className=" text-center text-lg p-2">{description}</p>

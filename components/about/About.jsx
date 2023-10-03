@@ -1,10 +1,11 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import styles from './about.module.css';
 import HyperOne from '../customH1/HyperOne';
 import Image from 'next/image';
 import CustomButton from '../button/CustomButton';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
+import Fallback from '../image/Fallback';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,19 +21,19 @@ const About = () => {
   }, [inView1, inView2, inView3, inView4]);
   const memoizedImage = useMemo(
     () => (
-      <Image
-        placeholder="blur"
-        height={960}
-        width={1080}
-        alt="Taha Al-Mulla Image"
-        src={'/imgs/Taha.jpg'}
-        priority
-        fill
-      />
+      <Suspense fallback={<Fallback />}>
+        <Image
+          height={300}
+          width={300}
+          alt="Taha Al-Mulla Image"
+          src={'/imgs/Taha.jpg'}
+          loading="lazy"
+        />
+      </Suspense>
     ),
     []
   );
-  const handleButtonClick = useCallback(() => {}, []);
+
   return useMemo(
     () => (
       <div id="about" className={`${styles['about-container']}`}>
@@ -74,12 +75,13 @@ const About = () => {
               </div>
             </div>
             <Link
+              aria-label="download cv"
               download
               href={
                 'https://drive.google.com/file/d/12r6-0fo4CjA7IREC8HkrIREwFlQoxLH1/view?usp=drive_link'
               }
             >
-              <CustomButton text={'Download CV'} onclick={handleButtonClick} />
+              <CustomButton text={'Download CV'} />
             </Link>
           </section>
           <section className={styles.skillSection}>
@@ -147,7 +149,7 @@ const About = () => {
         </div>
       </div>
     ),
-    [isVisible, ref1, ref2, ref3, ref4, handleButtonClick, memoizedImage]
+    [isVisible, ref1, ref2, ref3, ref4, memoizedImage]
   );
 };
 export default About;

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 import {
   AiFillFacebook,
@@ -6,43 +5,52 @@ import {
   AiFillLinkedin,
   AiOutlineWhatsApp,
 } from 'react-icons/ai';
+import Anchor from '../link/Anchor';
 
 export default function Footer() {
+  const links = [
+    {
+      id: 1,
+      className: 'mx-4',
+      ariaLabel: 'linkedin',
+      href: 'https://www.linkedin.com/in/taha-al-mulla-17a76923a/',
+      icon: <AiFillLinkedin size={40} />,
+    },
+    {
+      id: 2,
+      className: 'mx-4',
+      ariaLabel: 'github',
+      href: 'https://github.com/Taha1dev',
+      icon: <AiFillGithub size={40} />,
+    },
+    {
+      id: 3,
+      className: 'mx-4',
+      ariaLabel: 'whatsapp',
+      href: 'https://wa.link/yns3z1',
+      icon: <AiOutlineWhatsApp size={40} />,
+    },
+    {
+      id: 4,
+      className: 'mx-4',
+      ariaLabel: 'facebook',
+      href: 'https://www.facebook.com/profile.php?id=100010269363969&mibextid=ZbWKwL',
+      icon: <AiFillFacebook size={40} />,
+    },
+  ];
   return (
     <footer className="py-4 z-40">
       <div className="container mx-auto flex justify-center">
-        <Link
-          target="_blank"
-          className="mx-4 "
-          aria-label="linkedin"
-          href="https://www.linkedin.com/in/taha-al-mulla-17a76923a/"
-        >
-          <AiFillLinkedin size={40} />
-        </Link>
-        <Link
-          target="_blank"
-          className="mx-4 "
-          aria-label="github"
-          href="https://github.com/Taha1dev"
-        >
-          <AiFillGithub size={40} />
-        </Link>
-        <Link
-          target="_blank"
-          className="mx-4 "
-          aria-label="whatsapp"
-          href="https://wa.link/yns3z1"
-        >
-          <AiOutlineWhatsApp size={40} />
-        </Link>
-        <Link
-          target="_blank"
-          className="mx-4 "
-          aria-label="facebook"
-          href="https://www.facebook.com/profile.php?id=100010269363969&mibextid=ZbWKwL"
-        >
-          <AiFillFacebook size={40} />
-        </Link>
+        {links.map((link) => (
+          <Anchor
+            key={link.id}
+            className={link.className}
+            ariaLabel={link.ariaLabel}
+            href={link.href}
+          >
+            {link.icon}
+          </Anchor>
+        ))}
       </div>
       <p className="text-center mt-4 text-lg font-bold">
         © {new Date().getFullYear()} Taha Al-Mulla. All rights reserved.
