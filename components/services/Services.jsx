@@ -37,7 +37,7 @@ const Services = () => {
     <div id="services">
       <HyperOne value={'Services'} />
       <div className="my-5">
-        <p className="lg:text-2xl lg:text-center sm:text-xl p-4 text-justify">
+        <p className="lg:text-2xl lg:text-center sm:text-2xl p-4 text-justify">
           As a freelance front-end developer, I specialize in crafting intuitive
           and responsive user interfaces using modern web standards and
           frameworks. With a focus on clean code, accessibility and performance,
@@ -53,7 +53,7 @@ const Services = () => {
             alt={card.alt}
             title={card.title}
             description={card.description}
-            className={`logo${index+1}`}
+            className={`logo${index + 1}`}
           />
         ))}
       </div>
