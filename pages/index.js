@@ -15,35 +15,34 @@ export default function Home() {
       <Head>
         <title>Taha Al-Mulla</title>
       </Head>
-      <div className="z-20">
-        <Animation />
-      </div>
-      <div>
-        <HeroSection />
-      </div>
+
+      <Animation />
+
+      <HeroSection />
+
       <div className="relative container mx-auto sm:col-span-12 flex flex-col items-center justify-center align-middle">
-          <div className="mt-16">
-            <About />
-          </div>
-          <div className="mt-16">
-            <Services />
-          </div>
-          <div className="mt-16">
-            <Skills />
-          </div>
-          <div className="mt-16">
-            <Portfolio />
-          </div>
-          <div className="mt-16">
-            <Testimonials />
-          </div>
-          <Offer />
-          <div className="mt-16">
-            <ContactMe />
-          </div>
-          <div className="mt-16">
-            <Footer />
-          </div>
+        <div className="mt-16">
+          <About />
+        </div>
+        <div className="mt-16">
+          <Services />
+        </div>
+        <div className="mt-16">
+          <Skills />
+        </div>
+        <div className="mt-16">
+          <Portfolio />
+        </div>
+        <div className="mt-16">
+          <Testimonials />
+        </div>
+        <Offer />
+        <div className="mt-16">
+          <ContactMe />
+        </div>
+        <div className="mt-16">
+          <Footer />
+        </div>
       </div>
     </>
   );
