@@ -33,16 +33,17 @@ const cards = [
 ];
 
 const Services = () => {
+  const breif = `As a freelance front-end developer, I specialize in crafting intuitive
+  and responsive user interfaces using modern web standards and
+  frameworks. With a focus on clean code, accessibility, and
+  performance, I create pixel-perfect websites and apps that deliver
+  engaging experiences on any device.`;
   return (
     <div id="services">
       <HyperOne value={'Services'} />
       <div className="my-5">
         <p className="lg:text-2xl lg:text-center text-xl p-4 text-justify">
-          As a freelance front-end developer, I specialize in crafting intuitive
-          and responsive user interfaces using modern web standards and
-          frameworks. With a focus on clean code, accessibility, and
-          performance, I create pixel-perfect websites and apps that deliver
-          engaging experiences on any device.
+          {breif}
         </p>
       </div>
       <div className="my-12 grid lg:grid-cols-4 sm:grid-cols-1 m-5 md:grid-cols-2 gap-8">
