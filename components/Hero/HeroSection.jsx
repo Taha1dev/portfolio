@@ -41,7 +41,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <p className="mt-6 text-lg leading-8 ">
+            <p className="mt-6 text-xl text-justify leading-8 ">
               Level up your online presence with a skilled frontend developer
               who creates eye-catching designs and user-friendly experiences.
               Let&apos;s craft a captivating digital journey that stands out and
