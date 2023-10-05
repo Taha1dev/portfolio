@@ -1,24 +1,63 @@
-import { Suspense, useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState, useRef } from 'react';
 import styles from './about.module.css';
 import HyperOne from '../customH1/HyperOne';
 import Image from 'next/image';
 import CustomButton from '../button/CustomButton';
-import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 import Fallback from '../image/Fallback';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [ref1, inView1] = useInView();
-  const [ref2, inView2] = useInView();
-  const [ref3, inView3] = useInView();
-  const [ref4, inView4] = useInView();
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
 
   useEffect(() => {
-    if (inView1 || inView2 || inView3 || inView4) {
-      setIsVisible(true);
-    }
-  }, [inView1, inView2, inView3, inView4]);
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.25,
+    };
+
+    const observer1 = new IntersectionObserver(
+      handleIntersection,
+      observerOptions
+    );
+    const observer2 = new IntersectionObserver(
+      handleIntersection,
+      observerOptions
+    );
+    const observer3 = new IntersectionObserver(
+      handleIntersection,
+      observerOptions
+    );
+    const observer4 = new IntersectionObserver(
+      handleIntersection,
+      observerOptions
+    );
+
+    if (ref1.current) observer1.observe(ref1.current);
+    if (ref2.current) observer2.observe(ref2.current);
+    if (ref3.current) observer3.observe(ref3.current);
+    if (ref4.current) observer4.observe(ref4.current);
+
+    return () => {
+      if (ref1.current) observer1.unobserve(ref1.current);
+      if (ref2.current) observer2.unobserve(ref2.current);
+      if (ref3.current) observer3.unobserve(ref3.current);
+      if (ref4.current) observer4.unobserve(ref4.current);
+    };
+  }, []);
+
   const memoizedImage = useMemo(
     () => (
       <Suspense fallback={<Fallback />}>
@@ -46,15 +85,16 @@ const About = () => {
               Professional Web Developer & Designer having 2 years of experince
             </h2>
             <p className="text-xl justify">
-              As a front-end developer with experience in React and Next.js, I
-              have 2 years of professional web development and design expertise.
-              I am skilled in creating responsive and interactive user
-              interfaces, utilizing modern web technologies and frameworks. My
-              goal is to deliver high-quality and visually appealing websites
-              that meet the client&apos;s requirements and provide an excellent
-              user experience. I am passionate about staying up-to-date with the
-              latest industry trends and continuously improving my skills to
-              deliver cutting-edge solutions.
+              As an experienced front-end developer proficient in React and
+              Next.js, I boast two years of professional expertise in web
+              development and design. My skill set encompasses the creation of
+              responsive and interactive user interfaces, leveraging
+              cutting-edge web technologies and frameworks. My primary objective
+              is to deliver visually stunning, high-quality websites that not
+              only align with the client&apos;s requirements but also offer an
+              exceptional user experience. My passion lies in remaining abreast
+              of the latest industry trends and continually enhancing my skills
+              to provide innovative solutions
             </p>
             <div className={`${styles.personalInfo}`}>
               <div>
@@ -70,13 +110,14 @@ const About = () => {
                 <span>Software Engineering</span>
               </div>
               <div>
-                <span className="font-bold">Address:</span>
-                <span>Damascus, Syria</span>
+                <span className="font-bold">Employability:</span>
+                <span>Available ✅</span>
               </div>
             </div>
             <Link
               aria-label="download cv"
               download
+              target="_blank"
               href={'https://rxresu.me/taha.bus11/taha-almulla'}
             >
               <CustomButton text={'Download CV'} />
@@ -99,7 +140,7 @@ const About = () => {
               </div>
             </div>
             <div className={styles.subject}>
-              <div className={styles.subject}>Web Development </div>
+              <div className={styles.subject}>Web Development</div>
               <div className={styles['progress-bar']}>
                 <div
                   ref={ref2}
@@ -147,7 +188,8 @@ const About = () => {
         </div>
       </div>
     ),
-    [isVisible, ref1, ref2, ref3, ref4, memoizedImage]
+    [isVisible, memoizedImage]
   );
 };
+
 export default About;
