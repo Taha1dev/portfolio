@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Dialog } from '@headlessui/react';
 import { Link as ScrollLink } from 'react-scroll';
 import { ThemeToggler } from '@/theme/Themetoggler';
 
@@ -18,7 +17,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   return (
@@ -27,9 +26,7 @@ export default function NavBar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-primary font-bold text-3xl">
-                Taha Al-Mulla
-              </span>
+              <span className="text-primary font-bold text-3xl">Taha</span>
             </div>
           </div>
           <div className="hidden md:hidden lg:flex lg:gap-x-12">
@@ -40,8 +37,8 @@ export default function NavBar() {
                 spy={true}
                 href={item.href}
                 smooth={true}
-                prefetch={item.prefetch}
                 duration={200}
+                offset={-80}
                 className="text-lg leading-6 cursor-pointer"
               >
                 {item.name}
@@ -91,13 +88,9 @@ export default function NavBar() {
         </div>
       </div>
       {isOpen && (
-        <Dialog
-          open={isOpen}
-          onClose={toggleMenu}
-          className="fixed inset-0 z-50 overflow-y-auto"
-        >
-          <Dialog.Overlay className="fixed inset-0 bg-black opacity-50 z-0" />
-          <div className="md:mt-24  flex justify-center items-start h-full md:h-screen">
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="fixed inset-0 bg-black opacity-50 z-0" />
+          <div className="md:mt-24 flex justify-center items-start h-full md:h-screen">
             <div className="bg-mainBg text-white z-10 w-full flex flex-col p-6 rounded-3xl m-6 mt-20">
               {navigation.map((item) => (
                 <ScrollLink
@@ -105,15 +98,18 @@ export default function NavBar() {
                   to={item.href.substring(1)}
                   spy={true}
                   smooth={true}
+                  prefetch={item.prefetch}
                   duration={200}
-                  className="flex justify-between text-lg leading-6  mx-4 my-3 border-b-2 curs border-primary"
+                  offset={-80}
+                  className="flex justify-between text-lg leading-6 mx-4 my-3 border-b-2 border-primary"
+                  onClick={toggleMenu} 
                 >
                   {item.name}
                 </ScrollLink>
               ))}
             </div>
           </div>
-        </Dialog>
+        </div>
       )}
     </nav>
   );
