@@ -40,9 +40,9 @@ const Services = () => {
         <p className="lg:text-2xl lg:text-center sm:text-2xl p-4 text-justify">
           As a freelance front-end developer, I specialize in crafting intuitive
           and responsive user interfaces using modern web standards and
-          frameworks. With a focus on clean code, accessibility and performance,
-          I create pixel-perfect websites and apps that offer engaging
-          experiences on any device.
+          frameworks. With a focus on clean code, accessibility, and
+          performance, I create pixel-perfect websites and apps that deliver
+          engaging experiences on any device.
         </p>
       </div>
       <div className="my-12 grid lg:grid-cols-4 sm:grid-cols-1 m-5 md:grid-cols-2 gap-8">
