@@ -10,6 +10,10 @@ import Portfolio from '@/components/portfolio/Portfolio';
 import Services from '@/components/services/Services';
 import Head from 'next/head';
 export default function Home() {
+  Home.getInitialProps = async ({ res }) => {
+    res?.setHeader('Cache-Control', 'public, max-age=3600');
+    return {};
+  };
   return (
     <>
       <Head>
