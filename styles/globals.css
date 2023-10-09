@@ -35,17 +35,7 @@
   }
 }
 
-@keyframes skeleton-loading-gradient {
-  0% {
-    left: -100%;
-    /* Starting position outside the container */
-  }
 
-  100% {
-    left: 100%;
-    /* Ending position outside the container */
-  }
-}
 
 @keyframes animate {
   0% {
