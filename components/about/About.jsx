@@ -72,7 +72,16 @@ const About = () => {
     ),
     []
   );
-
+  const aboutText = `As an experienced front-end developer proficient in React and
+      Next.js, I boast two years of professional expertise in web
+      development and design. My skill set encompasses the creation of
+      responsive and interactive user interfaces, leveraging
+      cutting-edge web technologies and frameworks. My primary objective
+      is to deliver visually stunning, high-quality websites that not
+      only align with the client&apos;s requirements but also offer an
+      exceptional user experience. My passion lies in remaining abreast
+      of the latest industry trends and continually enhancing my skills
+      to provide innovative solutions`;
   return useMemo(
     () => (
       <div id="about" className={`${styles['about-container']}`}>
@@ -84,18 +93,7 @@ const About = () => {
               {' '}
               Professional Web Developer & Designer having 2 years of experince
             </h2>
-            <p className="text-xl justify">
-              As an experienced front-end developer proficient in React and
-              Next.js, I boast two years of professional expertise in web
-              development and design. My skill set encompasses the creation of
-              responsive and interactive user interfaces, leveraging
-              cutting-edge web technologies and frameworks. My primary objective
-              is to deliver visually stunning, high-quality websites that not
-              only align with the client&apos;s requirements but also offer an
-              exceptional user experience. My passion lies in remaining abreast
-              of the latest industry trends and continually enhancing my skills
-              to provide innovative solutions
-            </p>
+            <p className="text-xl text-justify">{aboutText}</p>
             <div className={`${styles.personalInfo}`}>
               <div>
                 <span className="font-bold">Full Name:</span>
