@@ -32,7 +32,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/imgs/logo.png"></link>
+        <link rel="icon" href="/imgs/logo.png" />
         <meta name="theme-color" content="#051823" />
         <meta
           name="viewport"
@@ -46,7 +46,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="copyright" content="Taha Al-Mulla" />
         <meta
           name="keywords"
-          content="Taha, Al-Mulla, Mulla, frontend, Front-end, React, Reactjs, Next, Next.js, Web, webdeveloper, freelancer, uiux, designer, bussiness, web3, PWA, performance, SEO, Optimization"
+          content="Taha,tahamulla, Al-Mulla, Mulla, frontend, Front-end, React, Reactjs, Next, Next.js, Web, webdeveloper, freelancer, uiux, designer, bussiness, web3, PWA, performance, SEO, Optimization"
         />
         <meta name="author" content="Taha Al-Mulla" />
         <meta property="og:title" content="Taha Mulla Frontend Developer" />
@@ -55,6 +55,7 @@ export default function MyApp({ Component, pageProps }) {
           content="Hello My Name is Taha aka Taha Al-Mulla i'm a Software Engineer specalize in Building web applicatoins"
         />
         <meta property="og:url" content="https://tahamulla.vercel.app/" />
+        <meta name="robots" content="all" />
       </Head>
       <style jsx global>{`
         html {
