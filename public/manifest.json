@@ -2,7 +2,7 @@
   "name": "Taha al-Mulla Website",
   "short_name": "Taha Al-Mulla",
   "description": "A Progressive Web App built by Taha",
-  "start_url": "https://tahamulla.vercel.app",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#051823",
   "theme_color": "#051823",
