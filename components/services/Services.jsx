@@ -7,14 +7,14 @@ const cards = [
     src: '/svg/skills/react.svg',
     alt: 'Web Development',
     title: 'Web Development',
-    description: 'Building High-Quality Web application using modern Solutions',
+    description: 'Building High-quality web application using modern solutions',
   },
   {
     src: '/svg/ui_ux.svg',
     alt: 'UI/UX Design',
     title: 'UI/UX Design',
     description:
-      ' specialize in creating intuitive and visually appealing user interfaces and .',
+      ' Specialize in creating intuitive and visually appealing user interfaces.',
   },
   {
     src: '/svg/newseo.svg',
@@ -28,7 +28,7 @@ const cards = [
     alt: 'Performance Optimization',
     title: 'Performance Optimize',
     description:
-      'optimize websites and applications to deliver fast and efficient performance.',
+      'Optimize websites and applications to deliver fast and efficient performance.',
   },
 ];
 
