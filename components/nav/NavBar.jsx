@@ -1,17 +1,24 @@
 import { useState } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import { ThemeToggler } from '@/theme/Themetoggler';
+import Link from 'next/link';
 
 export default function NavBar() {
   const navigation = [
-    { id: 1, name: 'Home', href: '/home' },
-    { id: 2, name: 'About', href: '/about' },
-    { id: 3, name: 'Services', href: '/services' },
-    { id: 4, name: 'Skills', href: '/skills' },
-    { id: 5, name: 'Portfolio', href: '/portfolio' },
-    { id: 6, name: 'Testimonial', href: '/testimonial' },
-    { id: 7, name: 'Contact', href: '/contact' },
-    { id: 8, name: <ThemeToggler />, href: '/' },
+    { id: 1, name: 'Home', href: '#home' },
+    { id: 2, name: 'About', href: '#about' },
+    { id: 3, name: 'Services', href: '#services' },
+    { id: 4, name: 'Skills', href: '#skills' },
+    { id: 5, name: 'Portfolio', href: '#portfolio' },
+    { id: 6, name: 'Testimonial', href: '#testimonial' },
+    { id: 7, name: 'Contact', href: '#contact' },
+    {
+      id: 8,
+      name: <ThemeToggler />,
+      href: '/',
+      onClick: (e) => {
+        e.preventDefault();
+      },
+    },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -31,18 +38,15 @@ export default function NavBar() {
           </div>
           <div className="hidden md:hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <ScrollLink
+              <Link
                 key={item.id}
                 to={item.href.substring(1)}
-                spy={true}
+                onClick={item.onClick}
                 href={item.href}
-                smooth={true}
-                duration={200}
-                offset={-80}
                 className="text-lg leading-6 cursor-pointer"
               >
                 {item.name}
-              </ScrollLink>
+              </Link>
             ))}
           </div>
           <div className="-mr-2 flex lg:hidden">
@@ -93,19 +97,14 @@ export default function NavBar() {
           <div className="md:mt-24 flex justify-center items-start h-full md:h-screen">
             <div className="bg-mainBg text-white z-10 w-full flex flex-col p-6 rounded-3xl m-6 mt-20">
               {navigation.map((item) => (
-                <ScrollLink
+                <Link
                   key={item.id}
                   to={item.href.substring(1)}
-                  spy={true}
-                  smooth={true}
-                  prefetch={item.prefetch}
-                  duration={200}
-                  offset={-80}
                   className="flex justify-between text-lg leading-6 mx-4 my-3 border-b-2 border-primary"
-                  onClick={toggleMenu} 
+                  onClick={toggleMenu}
                 >
                   {item.name}
-                </ScrollLink>
+                </Link>
               ))}
             </div>
           </div>
