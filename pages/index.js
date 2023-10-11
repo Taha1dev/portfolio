@@ -9,11 +9,49 @@ import Offer from '@/components/offer/Offer';
 import Portfolio from '@/components/portfolio/Portfolio';
 import Services from '@/components/services/Services';
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
+
 export default function Home() {
   Home.getInitialProps = async ({ res }) => {
     res?.setHeader('Cache-Control', 'public, max-age=3600');
     return {};
   };
+
+  const [showScroller, setShowScroller] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 1600) {
+        setShowScroller(true);
+      } else {
+        setShowScroller(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollerStyle = {
+    padding: '10px',
+    position: 'fixed',
+    bottom: '50px',
+    right: '15px',
+    fontWeight: 'bold',
+    color: '#fff',
+    fontSize: '24px',
+    border: 'none',
+    display: showScroller ? 'block' : 'none',
+    background: 'primary',
+  };
+
   return (
     <>
       <Head>
@@ -48,6 +86,27 @@ export default function Home() {
           <Footer />
         </div>
       </div>
+
+      <button
+        className="bg-primary"
+        style={scrollerStyle}
+        onClick={scrollToTop}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className="text-white w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M5 10l7-7m0 0l7 7m-7-7v18"
+          />
+        </svg>
+      </button>
     </>
   );
 }

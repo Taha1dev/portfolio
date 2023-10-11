@@ -186,7 +186,7 @@ const About = () => {
         </div>
       </div>
     ),
-    [isVisible, memoizedImage]
+    [isVisible, memoizedImage, aboutText]
   );
 };
 
