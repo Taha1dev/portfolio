@@ -3,6 +3,7 @@ import {
   AiFillLinkedin,
   AiFillGithub,
   AiOutlineWhatsApp,
+  AiOutlineTwitter,
 } from 'react-icons/ai';
 import styles from './social.module.css';
 import Anchor from '../link/Anchor';
@@ -30,10 +31,15 @@ const SocialLinks = () => {
     },
     {
       id: 4,
-
       ariaLabel: 'facebook',
       href: 'https://www.facebook.com/profile.php?id=100010269363969&mibextid=ZbWKwL',
       icon: <AiFillFacebook size={40} />,
+    },
+    {
+      id: 5,
+      ariaLabel: 'twitter',
+      href: 'https://twitter.com/TahaAlMull67632',
+      icon: <AiOutlineTwitter size={40} />,
     },
   ];
   return (
