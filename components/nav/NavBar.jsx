@@ -15,9 +15,7 @@ export default function NavBar() {
       id: 8,
       name: <ThemeToggler />,
       href: '/',
-      onClick: (e) => {
-        e.preventDefault();
-      },
+      onClick: (e) => e.preventDefault(),
     },
   ];
 
@@ -100,6 +98,7 @@ export default function NavBar() {
                 <Link
                   key={item.id}
                   to={item.href.substring(1)}
+                  href={item.href}
                   className="flex justify-between text-lg leading-6 mx-4 my-3 border-b-2 border-primary"
                   onClick={toggleMenu}
                 >
