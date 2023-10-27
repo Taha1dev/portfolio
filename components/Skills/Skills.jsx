@@ -5,6 +5,7 @@ const Skills = () => {
   const skillsData = [
     { name: 'React', imageSrc: '/svg/skills/react.svg' },
     { name: 'Next.js', imageSrc: '/svg/skills/nextjs.svg' },
+    { name: 'Angular', imageSrc: '/svg/skills/angular.svg' },
     { name: 'Redux', imageSrc: '/svg/skills/redux.svg' },
     { name: 'vite', imageSrc: '/svg/skills/vite.svg' },
     { name: 'React Query', imageSrc: '/svg/skills/rq.svg' },

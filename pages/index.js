@@ -59,7 +59,6 @@ export default function Home() {
       </Head>
 
       <Animation />
-
       <HeroSection />
 
       <div className="relative container mx-auto sm:col-span-12 flex flex-col items-center justify-center align-middle">

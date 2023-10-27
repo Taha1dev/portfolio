@@ -31,9 +31,9 @@ const HeroSection = () => {
                       src="/imgs/me.jpg"
                       width={288}
                       height={288}
-                      decoding="async"
+                      layout="fixed"
+                      objectFit="cover"
                       priority
-                      layout="intrinsic"
                       className="object-cover w-full h-full rounded-full ring-gray-300 dark:ring-gray-500"
                       style={{ color: 'transparent' }}
                     />
