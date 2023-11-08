@@ -38,7 +38,6 @@ export default function NavBar() {
             {navigation.map((item) => (
               <Link
                 key={item.id}
-                to={item.href.substring(1)}
                 onClick={item.onClick}
                 href={item.href}
                 className="text-lg leading-6 cursor-pointer"
