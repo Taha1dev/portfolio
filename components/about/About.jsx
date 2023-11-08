@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useMemo, useState, useRef } from 'react';
+import React, { Suspense, useEffect, useMemo, useState, useRef } from 'react';
 import styles from './about.module.css';
 import HyperOne from '../customH1/HyperOne';
 import Image from 'next/image';
@@ -57,17 +57,12 @@ const About = () => {
       if (ref4.current) observer4.unobserve(ref4.current);
     };
   }, []);
+  const MyAboutImage = React.lazy(() => import('../image/MyImage'));
 
   const memoizedImage = useMemo(
     () => (
       <Suspense fallback={<Fallback />}>
-        <Image
-          height={853}
-          width={1280}
-          alt="Taha Al-Mulla Image"
-          src={'/imgs/Taha.jpg'}
-          loading="lazy"
-        />
+        <MyAboutImage />
       </Suspense>
     ),
     []
