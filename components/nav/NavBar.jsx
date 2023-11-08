@@ -21,90 +21,90 @@ export default function NavBar() {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen((prevIsOpen) => !prevIsOpen);
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="navbar bg-mainBg fixed top-0 w-full z-50">
+    <nav className="navbar bg-mainBg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-primary font-bold text-3xl">Taha</span>
+              <h3
+                aria-label="Taha Al-Mulla"
+                className="text-white text-3xl font-bold"
+              >
+                Taha Al-Mulla
+              </h3>
             </div>
           </div>
-          <div className="hidden md:hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <Link
-                key={item.id}
-                onClick={item.onClick}
-                href={item.href}
-                className="text-lg leading-6 cursor-pointer"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden md:block">
+            <div className="ml-4 flex items-center">
+              {navigation.map((navlink) => {
+                return (
+                  <Link
+                    onClick={navlink.onClick}
+                    className="text-white px-3 py-2 rounded-md text-lg font-medium"
+                    key={navlink.id}
+                    href={navlink.href}
+                  >
+                    {navlink.name}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
-          <div className="-mr-2 flex lg:hidden">
+          <div className="md:hidden">
             <button
-              onClick={toggleMenu}
-              type="button"
-              aria-label="Toggle menu"
-              className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              onClick={toggleNavbar}
+              className="inline-flex items-center justify-center p-2 rounded-full text-white bg-primary focus:text-white transition duration-150 ease-in-out"
             >
-              {!isOpen ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              )}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-6 w-6"
+              >
+                {isOpen ? (
+                  <>
+                    <line x1="6" y1="18" x2="18" y2="6" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </>
+                ) : (
+                  <>
+                    <line x1="4" y1="6" x2="20" y2="6" />
+                    <line x1="4" y1="12" x2="16" y2="12" />
+                    <line x1="4" y1="18" x2="12" y2="18" />
+                  </>
+                )}
+              </svg>
             </button>
           </div>
         </div>
       </div>
       {isOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto">
-          <div className="fixed inset-0 bg-black opacity-50 z-0" />
-          <div className="md:mt-24 flex justify-center items-start h-full md:h-screen">
-            <div className="bg-mainBg text-white z-10 w-full flex flex-col p-6 rounded-3xl m-6 mt-20">
-              {navigation.map((item) => (
+        <div className="md:hidden">
+          <div className="relative h-96 px-2 pt-2 pb-3 sm:px-3 bg-mainBg z-50">
+            {navigation.map((navlink) => {
+              return (
                 <Link
-                  key={item.id}
-                  to={item.href.substring(1)}
-                  href={item.href}
-                  className="flex justify-between text-lg leading-6 mx-4 my-3 border-b-2 border-primary"
-                  onClick={toggleMenu}
+                  key={navlink.id}
+                  onClick={() => {
+                    navlink.onClick;
+                    setIsOpen(false);
+                  }}
+                  className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                  href={navlink.href}
                 >
-                  {item.name}
+                  {navlink.name}
                 </Link>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       )}
