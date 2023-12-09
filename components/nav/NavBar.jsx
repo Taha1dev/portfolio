@@ -39,7 +39,7 @@ export default function NavBar() {
               </h3>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden hmd:block">
             <div className="ml-4 flex items-center">
               {navigation.map((navlink) => {
                 return (
@@ -55,7 +55,7 @@ export default function NavBar() {
               })}
             </div>
           </div>
-          <div className="md:hidden">
+          <div className="hmd:hidden">
             <button
               onClick={toggleNavbar}
               className="inline-flex items-center justify-center p-2 rounded-full text-white bg-primary focus:text-white transition duration-150 ease-in-out"
@@ -65,10 +65,10 @@ export default function NavBar() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-6 w-6"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6"
               >
                 {isOpen ? (
                   <>
@@ -88,7 +88,7 @@ export default function NavBar() {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden">
+        <div className="hmd:hidden">
           <div className="relative h-96 px-2 pt-2 pb-3 sm:px-3 bg-mainBg z-50">
             {navigation.map((navlink) => {
               return (

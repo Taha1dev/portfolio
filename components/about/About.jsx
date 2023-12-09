@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useMemo, useState, useRef } from 'react';
 import styles from './about.module.css';
 import HyperOne from '../customH1/HyperOne';
-import Image from 'next/image';
+
 import CustomButton from '../button/CustomButton';
 import Link from 'next/link';
 import Fallback from '../image/Fallback';
@@ -104,7 +104,7 @@ const About = () => {
               </div>
               <div>
                 <span className="font-bold">Employability:</span>
-                <span>Available ✅</span>
+                <span>Remote only ⏳</span>
               </div>
             </div>
             <Link

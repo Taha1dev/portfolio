@@ -13,6 +13,9 @@ module.exports = {
         mainBg: 'var(--mainColor)',
         secondary: 'var(--secondColor)',
       },
+      screens: {
+        hmd: '968px',
+      },
     },
   },
   plugins: [],
