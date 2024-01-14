@@ -4,7 +4,7 @@ import HyperOne from '../customH1/HyperOne';
 
 import CustomButton from '../button/CustomButton';
 import Link from 'next/link';
-import Fallback from '../image/Fallback';
+import { AboutFallback } from '../image/Fallback';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -61,7 +61,7 @@ const About = () => {
 
   const memoizedImage = useMemo(
     () => (
-      <Suspense fallback={<Fallback />}>
+      <Suspense fallback={<AboutFallback />}>
         <MyAboutImage />
       </Suspense>
     ),

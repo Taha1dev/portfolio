@@ -1,7 +1,7 @@
 import SocialLinks from '../socialLinks/SocialLinks';
 import NavBar from '../nav/NavBar';
 import { Suspense, lazy } from 'react';
-import Fallback from '../image/Fallback';
+import Fallback, { HeroFallback } from '../image/Fallback';
 const LazyHeroImage = lazy(() => import('./HeroImage'));
 const HeroSection = () => {
   return (
@@ -24,7 +24,7 @@ const HeroSection = () => {
             <div>
               <div className="relative w-72 h-72">
                 <div className="absolute inset-0">
-                  <Suspense fallback={<Fallback />}>
+                  <Suspense fallback={<HeroFallback />}>
                     <LazyHeroImage />
                   </Suspense>
                 </div>
