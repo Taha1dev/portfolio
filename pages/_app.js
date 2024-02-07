@@ -1,10 +1,10 @@
 import '@/styles/globals.css';
-import { Montserrat } from 'next/font/google';
+import { Montserrat, Rubik } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
-const montserrat = Montserrat({
+const montserrat = Rubik({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '700'],
+  weight: 'variable',
   display: 'swap',
 });
 import { ThemeProvider } from '@/context/ContextProvider';
@@ -33,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/imgs/logo.png" />
-        <meta name="theme-color" content="#051823" />
+        <meta name="theme-color" content="#0f0f11" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1"
