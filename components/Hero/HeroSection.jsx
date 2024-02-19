@@ -1,7 +1,7 @@
 import SocialLinks from '../socialLinks/SocialLinks';
 import NavBar from '../nav/NavBar';
 import { Suspense, lazy } from 'react';
-import Fallback, { HeroFallback } from '../image/Fallback';
+import { HeroFallback } from '../image/Fallback';
 const LazyHeroImage = lazy(() => import('./HeroImage'));
 const HeroSection = () => {
   return (
@@ -16,7 +16,7 @@ const HeroSection = () => {
         <SocialLinks />
       </div>
       <div className="px-6 lg:px-8">
-        <div className="flex justify-center items-center max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="flex justify-center items-center max-w-2xl py-32 sm:py-48 lg:py-48">
           <div className="select-none flex flex-col justify-center items-center align-middle">
             <p className={`text-4xl text-center font-bold mb-2 sm:text-5xl `}>
               Hi There, I&apos;m Frontend Developer ⚡💻

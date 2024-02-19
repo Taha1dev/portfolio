@@ -58,6 +58,7 @@ export default function NavBar() {
           <div className="hmd:hidden">
             <button
               onClick={toggleNavbar}
+              aria-label="toggle icon"
               className="inline-flex items-center justify-center p-2 rounded-full text-white bg-primary focus:text-white transition duration-150 ease-in-out"
             >
               <svg

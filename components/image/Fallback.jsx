@@ -1,4 +1,3 @@
-import React from 'react';
 const AboutFallback = () => {
   return <div className="AboutFallback"></div>;
 };

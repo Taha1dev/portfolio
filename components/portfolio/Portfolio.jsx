@@ -1,4 +1,3 @@
-import React from 'react';
 import HyperOne from '../customH1/HyperOne';
 
 export default function Portfolio() {

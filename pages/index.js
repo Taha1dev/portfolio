@@ -87,7 +87,7 @@ export default function Home() {
       </div>
 
       <button
-        className="bg-primary"
+        className="bg-primary rounded-full"
         style={scrollerStyle}
         onClick={scrollToTop}
       >

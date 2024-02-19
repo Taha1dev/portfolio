@@ -1,4 +1,3 @@
-import React from 'react';
 import ServicesCard from './ServiceCard';
 import HyperOne from '../customH1/HyperOne';
 

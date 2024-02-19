@@ -64,7 +64,7 @@ export default function MyApp({ Component, pageProps }) {
       `}</style>
       <ThemeProvider>
         <Component {...pageProps} />
-        <Analytics />
+        <Analytics mode="production" />
       </ThemeProvider>
     </>
   );
