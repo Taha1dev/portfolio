@@ -12,12 +12,9 @@ const HeroSection = () => {
       <header className={`select-none absolute inset-x-0 top-0 `}>
         <NavBar />
       </header>
-      <div>
-        <SocialLinks />
-      </div>
       <div className="px-6 lg:px-8">
         <div className="flex justify-center items-center max-w-2xl py-32 sm:py-48 lg:py-48">
-          <div className="select-none flex flex-col justify-center items-center align-middle">
+          <div className="flex flex-col justify-center items-center align-middle">
             <p className={`text-4xl text-center font-bold mb-2 sm:text-5xl `}>
               Hi There, I&apos;m Frontend Developer ⚡💻
             </p>

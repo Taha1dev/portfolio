@@ -1,5 +1,5 @@
-import { Animation } from '@/components/Hero/Animation';
 import HeroSection from '@/components/Hero/HeroSection';
+import HeroTest from '@/components/Hero/HeroTest';
 import Skills from '@/components/Skills/Skills';
 import Testimonials from '@/components/Testimonials/Testimonials';
 import About from '@/components/about/About';
@@ -8,6 +8,9 @@ import Footer from '@/components/footer/Footer';
 import Offer from '@/components/offer/Offer';
 import Portfolio from '@/components/portfolio/Portfolio';
 import Services from '@/components/services/Services';
+import { IconCloudDemo } from '@/components/work-experience/IconCloud';
+import { NeonGradientCardDemo } from '@/components/work-experience/Neon';
+import WorkEx from '@/components/work-experience/WorkExperience';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 
@@ -58,8 +61,7 @@ export default function Home() {
         <title>Taha Al-Mulla</title>
       </Head>
 
-      <Animation />
-      <HeroSection />
+      <HeroTest />
 
       <div className="relative container mx-auto sm:col-span-12 flex flex-col items-center justify-center align-middle">
         <div className="mt-16">
@@ -70,6 +72,15 @@ export default function Home() {
         </div>
         <div className="mt-16">
           <Skills />
+        </div>
+        <div className="mt-16">
+          <WorkEx />
+        </div>
+        <div className="mt-16">
+          <IconCloudDemo />
+        </div>
+        <div className="mt-16">
+          {/* <NeonGradientCardDemo /> */}
         </div>
         <div className="mt-16">
           <Portfolio />
