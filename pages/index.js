@@ -71,9 +71,9 @@ export default function Home() {
         <div className="mt-16">
           <Skills />
         </div>
-        <div className="mt-16">
+        {/* <div className="mt-16">
           <Portfolio />
-        </div>
+        </div> */}
         <div className="mt-16">
           <Testimonials />
         </div>
